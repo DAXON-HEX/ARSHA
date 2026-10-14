@@ -3,41 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARSHA | Premium Apparel</title>
+    <title>ARSHA | Ultra Premium Apparel</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Premium Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">ARSHA</div>
-            <ul>
-                <li><a href="#">Collections</a></li>
-                <li><a href="#">Our Story</a></li>
-                <li><a href="#">Journal</a></li>
-            </ul>
-        </nav>
-        <div class="hero">
-            <h1>Timeless Elegance</h1>
-            <p>Redefining modern luxury</p>
-            <a href="#" class="cta-button">Explore Collection</a>
+    <!-- Navbar with Glassmorphism -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <!-- Unique Custom SVG Logo for ARSHA -->
+            <svg class="brand-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="50,10 90,90 10,90" fill="none" stroke="#D4AF37" stroke-width="3"/>
+                <polygon points="50,30 75,80 25,80" fill="#D4AF37"/>
+                <line x1="20" y1="60" x2="80" y2="60" stroke="#111" stroke-width="4"/>
+            </svg>
+            <span class="brand-name">ARSHA</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#collections">Collections</a></li>
+            <li><a href="#atelier">The Atelier</a></li>
+            <li><a href="#heritage">Heritage</a></li>
+        </ul>
+        <div class="nav-icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-shopping-bag"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="fade-in-up">The Epitome of Luxury</h1>
+            <p class="fade-in-up delay-1">Exclusive collections for the modern elite.</p>
+            <a href="#collections" class="btn fade-in-up delay-2">Discover the Collection</a>
         </div>
     </header>
-    <section class="featured">
-        <h2>Latest Arrivals</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&q=80" alt="Premium Blazer">
-                <h3>The Signature Blazer</h3>
-                <p>$250.00</p>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature">
+            <i class="fas fa-gem"></i>
+            <h3>Bespoke Quality</h3>
+            <p>Handcrafted with unparalleled precision and care.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-leaf"></i>
+            <h3>Ethical Silk</h3>
+            <p>Sustainably sourced, globally renowned fabrics.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-crown"></i>
+            <h3>Royal Heritage</h3>
+            <p>Designs inspired by timeless monarchies.</p>
+        </div>
+    </section>
+
+    <!-- Product Grid with Hover Effects -->
+    <section id="collections" class="collections">
+        <h2 class="section-title">Curated Masterpieces</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&q=80&w=800" alt="Velvet Tuxedo">
+                    <div class="quick-add">Add to Cart</div>
+                </div>
+                <div class="product-info">
+                    <h4>The Midnight Tuxedo</h4>
+                    <span class="price">$1,200</span>
+                </div>
             </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1544923246-77be078b430a?w=800&q=80" alt="Silk Dress">
-                <h3>Silk Evening Gown</h3>
-                <p>$320.00</p>
+            <div class="product-card">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&q=80&w=800" alt="Silk Dress">
+                    <div class="quick-add">Add to Cart</div>
+                </div>
+                <div class="product-info">
+                    <h4>Aura Silk Gown</h4>
+                    <span class="price">$1,850</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=800" alt="Trench Coat">
+                    <div class="quick-add">Add to Cart</div>
+                </div>
+                <div class="product-info">
+                    <h4>Imperial Trench</h4>
+                    <span class="price">$950</span>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h2>ARSHA</h2>
+            <p>Join our exclusive members club for private viewings.</p>
+            <div class="subscribe">
+                <input type="email" placeholder="Enter your email address">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 ARSHA Luxury Apparel. All rights reserved.</p>
+    </footer>
 </body>
 </html>
-
