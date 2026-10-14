@@ -1,58 +1,63 @@
 :root {
-    --bg-color: #0f0f0f;
+    --bg-color: #050505;
     --text-main: #ffffff;
-    --accent: #ff3b30; /* Neon Red Color */
+    --accent: #ff3b30;
     --font-head: 'Oswald', sans-serif;
     --font-body: 'Poppins', sans-serif;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-body {
-    background-color: var(--bg-color);
-    color: var(--text-main);
-    font-family: var(--font-body);
-}
+body { background-color: var(--bg-color); color: var(--text-main); font-family: var(--font-body); overflow-x: hidden; }
 
-.navbar {
-    position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between; 
-    align-items: center; padding: 1.5rem 5%; background: rgba(15, 15, 15, 0.95);
-    z-index: 1000; border-bottom: 2px solid var(--accent);
-}
-
+.navbar { position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 5%; background: rgba(5, 5, 5, 0.85); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 2px solid var(--accent); }
 .logo-container { display: flex; align-items: center; }
-
-.brand-name {
-    font-family: var(--font-head); font-size: 2.2rem; font-weight: 700;
-    color: var(--text-main); text-transform: uppercase; letter-spacing: 1px;
-}
-
-.nav-links { display: flex; gap: 2rem; list-style: none; }
-.nav-links a { color: var(--text-main); text-decoration: none; font-weight: 600; text-transform: uppercase; transition: 0.3s; }
+.brand-name { font-family: var(--font-head); font-size: 2.2rem; font-weight: 700; color: var(--text-main); text-transform: uppercase; letter-spacing: 2px; }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a { color: var(--text-main); text-decoration: none; font-weight: 600; text-transform: uppercase; transition: 0.3s; letter-spacing: 1px; }
 .nav-links a:hover { color: var(--accent); }
 .nav-icons i { font-size: 1.3rem; margin-left: 1.5rem; cursor: pointer; transition: 0.3s; }
 .nav-icons i:hover { color: var(--accent); }
 
-.hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; }
-.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); }
+/* Nayi Cool Background Image yahan hai */
+.hero { 
+    height: 100vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    position: relative; 
+    background: url('https://images.unsplash.com/photo-1555529733-0e67056058e1?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat;
+}
+.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.4), rgba(5,5,5,1)); }
 .hero-content { position: relative; z-index: 1; }
-.hero h1 { font-family: var(--font-head); font-size: 5rem; color: #fff; margin-bottom: 10px; text-transform: uppercase; }
-.hero p { font-size: 1.2rem; color: #ccc; margin-bottom: 30px; letter-spacing: 1px; }
 
-.btn { padding: 15px 35px; background: var(--accent); color: #fff; text-decoration: none; font-weight: bold; font-family: var(--font-head); font-size: 1.2rem; text-transform: uppercase; transition: 0.3s; }
-.btn:hover { background: #fff; color: #000; }
+/* Dope Glow Effect */
+.glow-text { 
+    font-family: var(--font-head); 
+    font-size: 6rem; 
+    color: #fff; 
+    margin-bottom: 10px; 
+    text-transform: uppercase; 
+    text-shadow: 0 0 10px rgba(255, 59, 48, 0.7), 0 0 20px rgba(255, 59, 48, 0.5), 0 0 40px rgba(255, 59, 48, 0.3);
+}
+
+.hero p { font-size: 1.3rem; color: #ccc; margin-bottom: 35px; letter-spacing: 2px; text-transform: uppercase; font-weight: 300; }
+.btn { padding: 15px 40px; background: transparent; border: 2px solid var(--accent); color: var(--accent); text-decoration: none; font-weight: bold; font-family: var(--font-head); font-size: 1.3rem; text-transform: uppercase; transition: 0.4s; letter-spacing: 2px; }
+.btn:hover { background: var(--accent); color: #fff; box-shadow: 0 0 15px var(--accent); }
 
 .collections { padding: 5rem 5%; }
-.section-title { font-family: var(--font-head); font-size: 3rem; text-align: center; margin-bottom: 3rem; color: var(--text-main); }
-.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-.product-card { background: #1a1a1a; padding-bottom: 1.5rem; border-radius: 8px; overflow: hidden; }
+.section-title { font-family: var(--font-head); font-size: 3.5rem; text-align: center; margin-bottom: 4rem; color: var(--text-main); letter-spacing: 2px; }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; }
+.product-card { background: #111; padding-bottom: 1.5rem; border-radius: 4px; overflow: hidden; border: 1px solid #222; transition: 0.3s; }
+.product-card:hover { border-color: var(--accent); transform: translateY(-5px); }
 .image-wrapper { position: relative; overflow: hidden; aspect-ratio: 3/4; }
-.image-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease; }
-.product-card:hover .image-wrapper img { transform: scale(1.08); }
-.quick-add { position: absolute; bottom: -60px; width: 100%; background: var(--accent); color: #fff; text-align: center; padding: 15px; font-family: var(--font-head); font-size: 1.2rem; transition: 0.3s; cursor: pointer; text-transform: uppercase; }
+.image-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: 0.7s ease; }
+.product-card:hover .image-wrapper img { transform: scale(1.1); filter: brightness(0.8); }
+.quick-add { position: absolute; bottom: -60px; width: 100%; background: var(--accent); color: #fff; text-align: center; padding: 15px; font-family: var(--font-head); font-size: 1.2rem; transition: 0.4s; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; }
 .product-card:hover .quick-add { bottom: 0; }
-.product-info { text-align: center; padding-top: 1rem; }
-.product-info h4 { font-size: 1.1rem; color: #eee; margin-bottom: 5px; }
-.price { color: var(--accent); font-weight: bold; font-size: 1.2rem; }
+.product-info { text-align: center; padding-top: 1.5rem; }
+.product-info h4 { font-size: 1.2rem; color: #fff; margin-bottom: 8px; text-transform: uppercase; }
+.price { color: var(--accent); font-weight: 600; font-size: 1.3rem; }
 
-@media (max-width: 768px) { .nav-links { display: none; } .hero h1 { font-size: 3rem; } }
+@media (max-width: 768px) { .nav-links { display: none; } .glow-text { font-size: 3.5rem; } }
