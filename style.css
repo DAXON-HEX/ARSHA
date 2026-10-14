@@ -61,3 +61,4 @@ body { background-color: var(--bg-color); color: var(--text-main); font-family: 
 .price { color: var(--accent); font-weight: 600; font-size: 1.3rem; }
 
 @media (max-width: 768px) { .nav-links { display: none; } .glow-text { font-size: 3.5rem; } }
+
